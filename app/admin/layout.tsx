@@ -27,8 +27,8 @@ export default function AdminLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`}>
+    <html lang="en" suppressHydrationWarning className={inter.className}>
+      <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="flex h-screen bg-background">
             <AdminSidebar />

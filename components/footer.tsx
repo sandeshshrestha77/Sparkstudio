@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
-import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react"
+import { Instagram } from "lucide-react"
+import Logo from "@/components/Logo"
 
 export function Footer() {
   return (
@@ -8,82 +9,34 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-blue-600 rounded-md flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-blue-400 blur-md opacity-50"></div>
-                <span className="text-white font-bold text-lg relative z-10">S</span>
-              </div>
-              <span className="text-xl font-bold text-white text-glow">Spark Studio</span>
+              <Logo className="h-8 w-auto" />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              Igniting creative sparks and transforming brands through exceptional design, video production, and digital
-              experiences that captivate and convert.
+              Spark Studio is your creative partner for branding, web design, video production, and digital marketing. We help startups and businesses ignite their brand presence and connect with audiences through innovative solutions.
             </p>
+            <div className="text-gray-300 text-sm mb-4">
+              <span className="block">Contact us: <a href="mailto:sparkstudionp@gmail.com" className="underline hover:text-blue-400">sparkstudionp@gmail.com</a></span>
+              <span className="block">Kathmandu, Nepal</span>
+            </div>
             <div className="flex space-x-4">
               <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full border-blue-900/30 hover:border-blue-500/50 hover:bg-blue-900/20"
+              variant="outline"
+              size="icon"
+              className="rounded-full border-blue-900/30 hover:border-blue-500/50 hover:bg-blue-900/20"
+              asChild
               >
-                <Facebook className="h-4 w-4 text-blue-400" />
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full border-blue-900/30 hover:border-blue-500/50 hover:bg-blue-900/20"
-              >
-                <Twitter className="h-4 w-4 text-blue-400" />
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full border-blue-900/30 hover:border-blue-500/50 hover:bg-blue-900/20"
-              >
+              <a href="https://www.instagram.com/sparkstudio.np" target="_blank" rel="noopener noreferrer">
                 <Instagram className="h-4 w-4 text-blue-400" />
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full border-blue-900/30 hover:border-blue-500/50 hover:bg-blue-900/20"
-              >
-                <Linkedin className="h-4 w-4 text-blue-400" />
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full border-blue-900/30 hover:border-blue-500/50 hover:bg-blue-900/20"
-              >
-                <Youtube className="h-4 w-4 text-blue-400" />
+              </a>
               </Button>
             </div>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4 text-white">Services</h3>
+            <h3 className="font-semibold mb-4 text-white">Portfolio</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
-                  Branding & Identity
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
-                  Web Design
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
-                  Video Production
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
-                  Motion Graphics
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
-                  Digital Marketing
-                </a>
+                <a href="/portfolio" className="hover:text-blue-400 transition-colors">Our Work</a>
               </li>
             </ul>
           </div>
@@ -92,29 +45,13 @@ export function Footer() {
             <h3 className="font-semibold mb-4 text-white">Company</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
-                  About Us
-                </a>
+                <a href="/about" className="hover:text-blue-400 transition-colors">About</a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
-                  Our Team
-                </a>
+                <a href="/journal" className="hover:text-blue-400 transition-colors">Blog</a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
-                  Contact
-                </a>
+                <a href="/contact" className="hover:text-blue-400 transition-colors">Contact</a>
               </li>
             </ul>
           </div>
@@ -122,15 +59,15 @@ export function Footer() {
 
         <div className="border-t border-blue-900/30 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-500 text-sm mb-4 md:mb-0">© 2023 Spark Studio. All rights reserved.</div>
+            <div className="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Spark Studio. All rights reserved.</div>
             <div className="flex space-x-6 text-sm text-gray-500">
-              <a href="#" className="hover:text-blue-400 transition-colors">
+              <a href="./privacy-policy" className="hover:text-blue-400 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-blue-400 transition-colors">
+              <a href="./terms-of-service" className="hover:text-blue-400 transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="hover:text-blue-400 transition-colors">
+              <a href="./cookie-policy" className="hover:text-blue-400 transition-colors">
                 Cookie Policy
               </a>
             </div>

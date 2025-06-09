@@ -1,6 +1,6 @@
 "use client"
 
-import type React from "react"
+import React from "react"
 
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
@@ -27,7 +27,9 @@ interface ServiceFormData {
   icon: string
 }
 
-export default function EditService({ params }: { params: { id: string } }) {
+export default function EditService({ params }: { params: Promise<{ id: string }> }) {
+  // Unwrap params using React.use() as required by Next.js 15
+  const { id } = React.use(params);
   const [formData, setFormData] = useState<ServiceFormData>({
     title: "",
     description: "",
@@ -47,7 +49,7 @@ export default function EditService({ params }: { params: { id: string } }) {
   useEffect(() => {
     const fetchService = async () => {
       try {
-        const { data, error } = await supabase.from("services").select("*").eq("id", params.id).single()
+        const { data, error } = await supabase.from("services").select("*").eq("id", id).single()
 
         if (error) throw error
 
@@ -71,7 +73,7 @@ export default function EditService({ params }: { params: { id: string } }) {
     }
 
     fetchService()
-  }, [params.id])
+  }, [id])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -88,7 +90,7 @@ export default function EditService({ params }: { params: { id: string } }) {
           ...formData,
           features: featuresArray,
         })
-        .eq("id", params.id)
+        .eq("id", id)
 
       if (error) throw error
 

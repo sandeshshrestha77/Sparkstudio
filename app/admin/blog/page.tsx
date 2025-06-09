@@ -7,8 +7,10 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { supabase } from "@/lib/supabase"
-import { Plus, Edit, Trash2, Search, Filter } from "lucide-react"
+import { Plus, Edit, Trash2, Search, Filter, Eye } from "lucide-react"
 import Link from "next/link"
+import dynamic from "next/dynamic"
+const QuillViewer = dynamic(() => import("@/components/admin/QuillViewer"), { ssr: false })
 
 interface BlogPost {
   id: string
@@ -162,51 +164,13 @@ export default function BlogAdmin() {
         {/* Posts List */}
         <div className="space-y-4">
           {filteredPosts.map((post) => (
-            <Card key={post.id}>
-              <CardContent className="p-6">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="font-semibold text-lg">{post.title}</h3>
-                      <Badge variant={post.published ? "default" : "secondary"}>
-                        {post.published ? "Published" : "Draft"}
-                      </Badge>
-                    </div>
-
-                    <p className="text-muted-foreground mb-3 line-clamp-2">{post.excerpt}</p>
-
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <Badge variant="outline">{post.category}</Badge>
-                      <Badge variant="outline">By {post.author}</Badge>
-                      {post.tags.slice(0, 3).map((tag) => (
-                        <Badge key={tag} variant="secondary">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-
-                    <div className="text-xs text-muted-foreground">
-                      Created: {new Date(post.created_at).toLocaleDateString()} | Updated:{" "}
-                      {new Date(post.updated_at).toLocaleDateString()}
-                    </div>
-                  </div>
-
-                  <div className="flex gap-2 ml-4">
-                    <Link href={`/admin/blog/edit/${post.id}`}>
-                      <Button variant="outline" size="sm">
-                        <Edit className="h-3 w-3" />
-                      </Button>
-                    </Link>
-                    <Button variant="outline" size="sm" onClick={() => togglePublished(post.id, post.published)}>
-                      {post.published ? "Unpublish" : "Publish"}
-                    </Button>
-                    <Button variant="destructive" size="sm" onClick={() => deletePost(post.id)}>
-                      <Trash2 className="h-3 w-3" />
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <BlogPostCard
+              key={post.id}
+              post={post}
+              onEdit={() => (window.location.href = `/admin/blog/${post.id}/edit`)}
+              onTogglePublished={() => togglePublished(post.id, post.published)}
+              onDelete={() => deletePost(post.id)}
+            />
           ))}
         </div>
 
@@ -232,3 +196,73 @@ export default function BlogAdmin() {
     </div>
   )
 }
+
+// BlogPostCard component for rendering each blog post with expand/collapse for content
+// (useState already imported at top)
+import { FC } from "react";
+
+type BlogPostCardProps = {
+  post: BlogPost;
+  onEdit: () => void;
+  onTogglePublished: () => void;
+  onDelete: () => void;
+};
+
+const BlogPostCard: FC<BlogPostCardProps> = ({ post, onEdit, onTogglePublished, onDelete }) => {
+  const [showContent, setShowContent] = useState(false);
+  return (
+    <Card className="w-full">
+      <CardContent className="p-6">
+        <div className="flex items-start justify-between">
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-2">
+              <h3 className="font-semibold text-lg">{post.title}</h3>
+              <Badge variant={post.published ? "default" : "secondary"}>
+                {post.published ? "Published" : "Draft"}
+              </Badge>
+            </div>
+            <p className="text-muted-foreground mb-3 line-clamp-2">{post.excerpt}</p>
+            <div className="flex flex-wrap gap-2 mb-3">
+              <Badge variant="outline">{post.category}</Badge>
+              <Badge variant="outline">By {post.author}</Badge>
+              {post.tags.slice(0, 3).map((tag) => (
+                <Badge key={tag} variant="secondary">
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+            <div className="text-xs text-muted-foreground mb-2">
+              Created: {new Date(post.created_at).toLocaleDateString()} | Updated: {new Date(post.updated_at).toLocaleDateString()}
+            </div>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="mb-2"
+              onClick={() => setShowContent((v) => !v)}
+            >
+              <Eye className="h-4 w-4 mr-1" />
+              {showContent ? "Hide" : "Read More"}
+            </Button>
+            {showContent && (
+              <div className="border mt-2 rounded bg-background p-4">
+                <QuillViewer value={post.content} />
+              </div>
+            )}
+          </div>
+          <div className="flex gap-2 ml-4">
+            <Button variant="outline" size="sm" onClick={onEdit}>
+              <Edit className="h-3 w-3" />
+            </Button>
+            <Button variant="outline" size="sm" onClick={onTogglePublished}>
+              {post.published ? "Unpublish" : "Publish"}
+            </Button>
+            <Button variant="destructive" size="sm" onClick={onDelete}>
+              <Trash2 className="h-3 w-3" />
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+

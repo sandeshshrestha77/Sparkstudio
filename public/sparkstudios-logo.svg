@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1464.7 244.95">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        font-size: 46.27px;
+      }
+
+      .cls-6, .cls-7 {
+        fill: #efefef;
+        font-family: DegularDisplay-Medium, 'Degular Display';
+        font-weight: 500;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-11 {
+        letter-spacing: 0em;
+      }
+
+      .cls-12 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-13 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 1.08px;
+      }
+
+      .cls-7 {
+        font-size: 199.65px;
+      }
+
+      .cls-14 {
+        fill: #2349e2;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-14" d="M17.99,225.79l15.88-15.88c2.94-2.94,6.94-4.6,11.1-4.6h106.97c6.87,0,10.31-8.31,5.45-13.17l-40.51-40.51c-3.28-3.28-7.73-5.12-12.37-5.12h0c-4.64,0-9.09,1.84-12.37,5.12l-49.08,49.08c-2.94,2.94-6.94,4.6-11.1,4.6H9.51c-8.16,0-12.24-9.86-6.47-15.63l62.38-62.38c.38-.38.38-.99,0-1.37L12.64,73.17C-14.36,46.17,4.76,0,42.94,0h146.55c8.16,0,12.24,9.86,6.47,15.63l-15.88,15.88c-2.94,2.94-6.94,4.6-11.1,4.6H45.26c-6.87,0-10.31,8.31-5.45,13.17l48.26,48.26c3.28,3.28,7.73,5.12,12.37,5.12h1.26c4.64,0,9.09-1.84,12.37-5.12l56.83-56.83c2.94-2.94,6.94-4.6,11.1-4.6h22.45c8.16,0,12.24,9.86,6.47,15.63l-70.75,70.75c-.38.38-.38.99,0,1.37l16.5,16.5,27.9,27.9c27,27,7.88,73.16-30.31,73.16H24.47c-8.16,0-12.24-9.86-6.47-15.63Z"/>
+      <polygon class="cls-13" points="473.45 76.77 473.45 78.34 472.66 77.56 473.45 76.77"/>
+      <text class="cls-7" transform="translate(216.5 186.15)"><tspan x="0" y="0">S</tspan><tspan class="cls-2" x="105.21" y="0">P</tspan><tspan class="cls-8" x="197.85" y="0">A</tspan><tspan class="cls-5" x="309.26" y="0">R</tspan><tspan x="420.46" y="0">K </tspan><tspan class="cls-12" x="555.02" y="0">S</tspan><tspan class="cls-10" x="653.05" y="0">T</tspan><tspan x="747.08" y="0">UDI</tspan><tspan class="cls-1" x="1017.2" y="0">O</tspan><tspan x="1142.98" y="0">S</tspan></text>
+      <text class="cls-6" transform="translate(1087.94 235.19)"><tspan x="0" y="0">C</tspan><tspan class="cls-9" x="28.22" y="0">r</tspan><tspan class="cls-4" x="41.32" y="0">e</tspan><tspan class="cls-11" x="63.29" y="0">a</tspan><tspan x="84.3" y="0">ti</tspan><tspan class="cls-3" x="107.71" y="0">v</tspan><tspan x="127.56" y="0">e. Digital. Bold.</tspan></text>
+    </g>
+  </g>
+</svg>

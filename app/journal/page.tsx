@@ -2,12 +2,14 @@
 
 import { useEffect, useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
+import QuillViewer from "@/components/admin/QuillViewer"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Input } from "@/components/ui/input"
 import { Calendar, Clock, Search, BookOpen, ArrowRight, Heart, Share2 } from "lucide-react"
 import { supabase } from "@/lib/supabase"
+import Link from "next/link"
 
 interface BlogPost {
   id: string
@@ -238,10 +240,13 @@ export default function JournalPage() {
                           <Badge className="bg-primary">Featured</Badge>
                           <Badge variant="outline">{featuredPost.category}</Badge>
                         </div>
-                        <h2 className="text-2xl md:text-3xl font-bold mb-4 hover:text-primary transition-colors cursor-pointer">
-                          {featuredPost.title}
-                        </h2>
-                        <p className="text-muted-foreground mb-6 leading-relaxed">{featuredPost.excerpt}</p>
+                        <Link href={`/journal/${featuredPost.id}`} passHref legacyBehavior>
+                          <a className="text-2xl md:text-3xl font-bold mb-4 hover:text-primary transition-colors cursor-pointer block">
+                            {featuredPost.title}
+                          </a>
+                        </Link>
+
+                        <QuillViewer value={featuredPost.content} />
 
                         <div className="flex items-center gap-4 mb-6">
                           <div className="flex items-center gap-3">
@@ -277,10 +282,12 @@ export default function JournalPage() {
                         </div>
 
                         <div className="flex items-center justify-between">
-                          <Button className="group">
-                            Read Article
-                            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                          </Button>
+                          <Link href={`/journal/${featuredPost.id}`} passHref legacyBehavior>
+                            <a className="inline-flex items-center text-primary hover:text-primary/80 text-sm font-medium">
+                              Read Article
+                              <ArrowRight className="ml-2 h-3 w-3" />
+                            </a>
+                          </Link>
                           <div className="flex items-center gap-3">
                             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
                               <Heart className="h-4 w-4" />
@@ -320,11 +327,13 @@ export default function JournalPage() {
                             </Badge>
                           </div>
 
-                          <h3 className="text-lg font-semibold mb-3 hover:text-primary transition-colors cursor-pointer line-clamp-2">
-                            {post.title}
-                          </h3>
+                          <Link href={`/journal/${post.id}`} passHref legacyBehavior>
+                            <a className="text-lg font-semibold mb-3 hover:text-primary transition-colors cursor-pointer line-clamp-2 block">
+                              {post.title}
+                            </a>
+                          </Link>
 
-                          <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{post.excerpt}</p>
+                          <QuillViewer value={post.content} />
 
                           <div className="flex items-center gap-3 mb-4">
                             <Avatar className="w-6 h-6">
@@ -348,10 +357,12 @@ export default function JournalPage() {
                           </div>
 
                           <div className="flex items-center justify-between">
-                            <Button variant="ghost" size="sm" className="p-0 h-auto text-primary hover:text-primary/80">
-                              Read More
-                              <ArrowRight className="ml-2 h-3 w-3" />
-                            </Button>
+                            <Link href={`/journal/${post.id}`} passHref legacyBehavior>
+                              <a className="inline-flex items-center text-primary hover:text-primary/80 text-sm font-medium">
+                                Read More
+                                <ArrowRight className="ml-2 h-3 w-3" />
+                              </a>
+                            </Link>
                             <div className="flex items-center gap-3">
                               <Button variant="ghost" size="sm" className="p-0 h-auto">
                                 <Heart className="h-3 w-3 text-muted-foreground" />

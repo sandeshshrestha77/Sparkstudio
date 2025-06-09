@@ -161,7 +161,6 @@ export default function AdminDashboard() {
 
   return (
     <div>
-      <AdminHeader title="Dashboard" subtitle="Welcome back, Admin" />
 
       <div className="p-6">
         {/* Stats Cards */}

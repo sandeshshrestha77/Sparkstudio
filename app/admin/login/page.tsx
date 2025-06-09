@@ -33,6 +33,12 @@ async function ensureAdminUser(email: string) {
   }
 }
 
+// Hardcoded allowlist for admin registration
+const ADMIN_EMAIL_ALLOWLIST = [
+  "sandesh@example.com",
+  "admin@example.com"
+];
+
 export default function AdminLogin() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -53,6 +59,13 @@ export default function AdminLogin() {
   const createAdminUser = async () => {
     setCreating(true)
     setStatus({ type: "", message: "" })
+
+    // Restrict registration to allowlisted emails
+    if (!ADMIN_EMAIL_ALLOWLIST.includes(email.trim().toLowerCase())) {
+      setStatus({ type: "error", message: "This email is not authorized to register as admin." });
+      setCreating(false);
+      return;
+    }
 
     try {
       const { data, error: signUpError } = await supabase.auth.signUp({

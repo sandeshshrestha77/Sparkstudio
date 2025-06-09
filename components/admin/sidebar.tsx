@@ -39,20 +39,7 @@ export function AdminSidebar() {
     <div
       className={`bg-background border-r h-screen flex flex-col transition-all duration-300 ${collapsed ? "w-16" : "w-64"}`}
     >
-      <div className="p-4 border-b flex items-center justify-between">
-        {!collapsed && (
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">S</span>
-            </div>
-            <span className="font-bold text-lg">Admin</span>
-          </div>
-        )}
-        {collapsed && (
-          <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center mx-auto">
-            <span className="text-primary-foreground font-bold text-sm">S</span>
-          </div>
-        )}
+      <div className="p-4 border-b flex items-center justify-end">
         <Button variant="ghost" size="sm" className="h-8 w-8 p-0" onClick={() => setCollapsed(!collapsed)}>
           {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
         </Button>

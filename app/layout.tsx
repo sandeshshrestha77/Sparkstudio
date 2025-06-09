@@ -51,8 +51,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${manrope.variable} font-sans antialiased`}>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${manrope.variable} font-sans`}>
+      <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="relative flex min-h-screen flex-col">
             <Navigation />

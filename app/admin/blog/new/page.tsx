@@ -7,7 +7,8 @@ import { useRouter } from "next/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import dynamic from "next/dynamic";
+const QuillEditor = dynamic(() => import("@/components/admin/QuillEditor"), { ssr: false });
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -130,9 +131,8 @@ export default function NewBlogPost() {
 
                 <div className="space-y-2">
                   <Label htmlFor="excerpt">Excerpt</Label>
-                  <Textarea
+                  <Input
                     id="excerpt"
-                    rows={3}
                     value={formData.excerpt}
                     onChange={(e) => handleChange("excerpt", e.target.value)}
                     placeholder="Brief description of the blog post"
@@ -140,13 +140,10 @@ export default function NewBlogPost() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="content">Content *</Label>
-                  <Textarea
-                    id="content"
-                    rows={12}
+                  <Label>Content *</Label>
+                  <QuillEditor
                     value={formData.content}
-                    onChange={(e) => handleChange("content", e.target.value)}
-                    required
+                    onChange={(value) => handleChange("content", value)}
                     placeholder="Write your blog post content here..."
                   />
                 </div>
@@ -186,7 +183,7 @@ export default function NewBlogPost() {
                       <div key={index} className="flex gap-2">
                         <Input
                           value={tag}
-                          onChange={(e) => updateTag(index, e.target.value)}
+                          onChange={(e: React.ChangeEvent<HTMLInputElement>) => updateTag(index, e.target.value)}
                           placeholder="Enter tag"
                           className="flex-1"
                         />

@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge"
-import { Heart, Users, Target, Award, ArrowRight, Mail, Linkedin, Twitter } from "lucide-react"
+import { Heart, Users, Target, Award, ArrowRight, Mail, Linkedin, Twitter, Instagram } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -30,27 +30,18 @@ export default function AboutPage() {
 
   const timeline = [
     {
-      year: "2024",
-      title: "Spark Studio Founded",
-      description:
-        "Launched in Kathmandu with a mission to provide exceptional creative services to Nepali businesses.",
-    },
-    {
-      year: "2023",
-      title: "Market Research",
-      description: "Identified the need for affordable, high-quality design and video services in Nepal.",
-    },
-    {
-      year: "2022",
-      title: "Industry Experience",
-      description: "Built expertise working with various Nepali clients on creative projects.",
-    },
-    {
-      year: "2021",
-      title: "Foundation Building",
-      description: "Developed our creative philosophy and approach to client collaboration.",
-    },
-  ]
+    year: "2025",
+    title: "Soft Launch",
+    description:
+      "We officially launched Spark Studio with a small team of passionate designers, focusing on local businesses.",
+  },
+  {
+    year: "2025",
+    title: "The Idea Sparked",
+    description:
+      "Spark Studios was conceptualized during freelance design projects — born out of a need for better creative services in Nepal.",
+  },
+];
 
   return (
     <div className="pt-16">
@@ -75,7 +66,7 @@ export default function AboutPage() {
               <div className="animate-slide-in">
                 <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Our Story</h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Spark Studio was founded in Kathmandu with a simple belief: great design should be accessible to
+                  Spark Studio was Founded with a simple belief: great design should be accessible to
                   businesses of all sizes in Nepal. We saw too many local companies struggling with outdated designs or
                   working with agencies that didn't truly understand the Nepali market.
                 </p>
@@ -98,7 +89,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="bg-blue-100 dark:bg-blue-900 rounded-lg p-6 text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">2024</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-2">2025</div>
                     <div className="text-sm text-muted-foreground">Founded in Kathmandu</div>
                   </div>
                   <div className="bg-green-100 dark:bg-green-900 rounded-lg p-6 text-center">
@@ -222,15 +213,16 @@ export default function AboutPage() {
                 </Button>
               </Link>
               <div className="flex gap-2">
-                <Button size="lg" variant="outline" className="w-12 h-12 p-0">
-                  <Mail className="h-5 w-5" />
-                </Button>
-                <Button size="lg" variant="outline" className="w-12 h-12 p-0">
-                  <Linkedin className="h-5 w-5" />
-                </Button>
-                <Button size="lg" variant="outline" className="w-12 h-12 p-0">
-                  <Twitter className="h-5 w-5" />
-                </Button>
+                <Link href="mailto:sparkstudionp@gmail.com">
+                  <Button size="lg" variant="outline" className="w-12 h-12 p-0">
+                    <Mail className="h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link href="https://www.instagram.com/sparkstudio.np" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="outline" className="w-12 h-12 p-0">
+                  <Instagram className="h-5 w-5" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

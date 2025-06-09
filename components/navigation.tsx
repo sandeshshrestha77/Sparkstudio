@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Menu, X, Sparkles } from "lucide-react"
 import { cn } from "@/lib/utils"
+import Logo from "@/components/Logo"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -53,11 +54,8 @@ export function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Sparkles className="h-5 w-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-display font-bold">Spark Studio</span>
+          <Link href="/" className="flex items-center group">
+            <Logo className="h-8 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

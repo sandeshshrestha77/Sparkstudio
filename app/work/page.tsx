@@ -158,41 +158,43 @@ export default function WorkPage() {
                   <h2 className="text-3xl font-bold mb-12 text-center">Featured Work</h2>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
                     {featuredProjects.slice(0, 2).map((project, index) => (
-                      <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-shadow group">
-                        <div className="aspect-video overflow-hidden">
-                          <img
-                            src={project.image_url || "/placeholder.svg"}
-                            alt={project.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                          />
-                        </div>
-                        <CardContent className="p-8">
-                          <div className="flex items-center gap-2 mb-4">
-                            <Badge className="bg-primary">Featured</Badge>
-                            <Badge variant="outline">{project.category}</Badge>
+                      <Link href={`/work/${project.id}`} key={project.id} className="block group">
+                        <Card className="overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
+                          <div className="aspect-video overflow-hidden">
+                            <img
+                              src={project.image_url || "/placeholder.svg"}
+                              alt={project.title}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            />
                           </div>
-                          <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-                          <p className="text-muted-foreground mb-6">{project.description}</p>
-                          <div className="flex items-center justify-between">
-                            <div className="flex flex-wrap gap-2">
-                              {project.tags.slice(0, 3).map((tag, idx) => (
-                                <Badge key={idx} variant="secondary" className="text-xs">
-                                  <Tag className="h-3 w-3 mr-1" />
-                                  {tag}
-                                </Badge>
-                              ))}
+                          <CardContent className="p-8">
+                            <div className="flex items-center gap-2 mb-4">
+                              <Badge className="bg-primary">Featured</Badge>
+                              <Badge variant="outline">{project.category}</Badge>
                             </div>
-                            {project.project_url && (
-                              <Link href={project.project_url} target="_blank">
-                                <Button size="sm" className="group">
-                                  View Project
-                                  <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                                </Button>
-                              </Link>
-                            )}
-                          </div>
-                        </CardContent>
-                      </Card>
+                            <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
+                            <p className="text-muted-foreground mb-6">{project.description}</p>
+                            <div className="flex items-center justify-between">
+                              <div className="flex flex-wrap gap-2">
+                                {project.tags.slice(0, 3).map((tag, idx) => (
+                                  <Badge key={idx} variant="secondary" className="text-xs">
+                                    <Tag className="h-3 w-3 mr-1" />
+                                    {tag}
+                                  </Badge>
+                                ))}
+                              </div>
+                              {project.project_url && (
+                                <Link href={project.project_url} target="_blank">
+                                  <Button size="sm" className="group">
+                                    View Project
+                                    <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                                  </Button>
+                                </Link>
+                              )}
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -207,44 +209,46 @@ export default function WorkPage() {
                 {regularProjects.length > 0 && <h2 className="text-3xl font-bold mb-12 text-center">All Projects</h2>}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {regularProjects.map((project, index) => (
-                    <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-shadow group">
-                      <div className="aspect-video overflow-hidden">
-                        <img
-                          src={project.image_url || "/placeholder.svg"}
-                          alt={project.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        />
-                      </div>
-                      <CardContent className="p-6">
-                        <div className="flex items-center gap-2 mb-3">
-                          <Badge variant="outline" className="text-xs">
-                            {project.category}
-                          </Badge>
-                          <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                            <Calendar className="h-3 w-3" />
-                            {new Date(project.created_at).toLocaleDateString()}
-                          </div>
+                    <Link href={`/work/${project.id}`} key={project.id} className="block group">
+                      <Card className="overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
+                        <div className="aspect-video overflow-hidden">
+                          <img
+                            src={project.image_url || "/placeholder.svg"}
+                            alt={project.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          />
                         </div>
-                        <h3 className="text-lg font-semibold mb-3 line-clamp-2">{project.title}</h3>
-                        <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{project.description}</p>
-                        <div className="flex items-center justify-between">
-                          <div className="flex flex-wrap gap-1">
-                            {project.tags.slice(0, 2).map((tag, idx) => (
-                              <Badge key={idx} variant="secondary" className="text-xs">
-                                {tag}
-                              </Badge>
-                            ))}
+                        <CardContent className="p-6">
+                          <div className="flex items-center gap-2 mb-3">
+                            <Badge variant="outline" className="text-xs">
+                              {project.category}
+                            </Badge>
+                            <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                              <Calendar className="h-3 w-3" />
+                              {new Date(project.created_at).toLocaleDateString()}
+                            </div>
                           </div>
-                          {project.project_url && (
-                            <Link href={project.project_url} target="_blank">
-                              <Button size="sm" variant="ghost" className="p-0 h-auto">
-                                <ExternalLink className="h-4 w-4" />
-                              </Button>
-                            </Link>
-                          )}
-                        </div>
-                      </CardContent>
-                    </Card>
+                          <h3 className="text-lg font-semibold mb-3 line-clamp-2">{project.title}</h3>
+                          <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{project.description}</p>
+                          <div className="flex items-center justify-between">
+                            <div className="flex flex-wrap gap-1">
+                              {project.tags.slice(0, 2).map((tag, idx) => (
+                                <Badge key={idx} variant="secondary" className="text-xs">
+                                  {tag}
+                                </Badge>
+                              ))}
+                            </div>
+                            {project.project_url && (
+                              <Link href={project.project_url} target="_blank">
+                                <Button size="sm" variant="ghost" className="p-0 h-auto">
+                                  <ExternalLink className="h-4 w-4" />
+                                </Button>
+                              </Link>
+                            )}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
                   ))}
                 </div>
 
