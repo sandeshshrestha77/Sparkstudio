@@ -139,7 +139,7 @@ export default function JournalPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Creative Journal</h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Insights, stories, and perspectives from our creative journey
+              Insights, stories, and perspectives from my creative journey
             </p>
 
             {/* Search and Filter - Only show if we have posts */}
@@ -208,7 +208,7 @@ export default function JournalPage() {
                   <BookOpen className="h-16 w-16 mx-auto mb-6 text-muted-foreground" />
                   <h3 className="text-2xl font-semibold mb-4">No Blog Posts Yet</h3>
                   <p className="text-muted-foreground mb-6">
-                    We haven't published any blog posts yet. Check back soon for our latest insights and creative
+                    I haven't published any blog posts yet. Check back soon for my latest insights and creative
                     stories!
                   </p>
                   <Button onClick={loadPosts} variant="outline">

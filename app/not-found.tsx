@@ -69,7 +69,7 @@ export default function NotFound() {
                   and we'll be happy to help.
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">
-                  <span className="font-medium">Email:</span> hello@sparkstudio.com.np |{" "}
+                  <span className="font-medium">Email:</span> hello@sandeshshrestha.com.np |{" "}
                   <span className="font-medium">Phone:</span> +977 9801234567
                 </p>
               </div>

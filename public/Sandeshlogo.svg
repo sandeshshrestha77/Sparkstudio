@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1132.29 166.37">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-2 {
+        font-size: 59.13px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #efefef;
+        font-family: DegularDisplay-Medium, 'Degular Display';
+        font-weight: 500;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        font-size: 118.63px;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-11 {
+        fill: #2349e2;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <text class="cls-2" transform="translate(650.77 153.89)"><tspan x="0" y="0">C</tspan><tspan class="cls-4" x="36.07" y="0">r</tspan><tspan class="cls-10" x="52.81" y="0">e</tspan><tspan class="cls-7" x="80.89" y="0">a</tspan><tspan class="cls-9" x="107.74" y="0">ti</tspan><tspan class="cls-1" x="137.66" y="0">v</tspan><tspan x="163.03" y="0">e. Digital. Bold.</tspan></text>
+      <path class="cls-11" d="M11.5,144.29l10.15-10.15c1.88-1.88,4.43-2.94,7.09-2.94h68.36c4.39,0,6.59-5.31,3.49-8.41l-25.89-25.89c-2.1-2.1-4.94-3.27-7.9-3.27h0c-2.96,0-5.81,1.18-7.9,3.27l-31.36,31.36c-1.88,1.88-4.43,2.94-7.09,2.94H6.08c-5.21,0-7.82-6.3-4.14-9.99l39.86-39.86c.24-.24.24-.63,0-.88L8.08,46.75C-9.18,29.5,3.04,0,27.44,0h93.65c5.21,0,7.82,6.3,4.14,9.99l-10.15,10.15c-1.88,1.88-4.43,2.94-7.09,2.94H28.92c-4.39,0-6.59,5.31-3.49,8.41l30.84,30.84c2.1,2.1,4.94,3.27,7.9,3.27h.81c2.96,0,5.81-1.18,7.9-3.27l36.32-36.31c1.88-1.88,4.43-2.94,7.09-2.94h14.35c5.21,0,7.82,6.3,4.14,9.99l-45.21,45.21c-.24.24-.24.63,0,.88l10.54,10.54,17.83,17.83c17.25,17.25,5.03,46.75-19.37,46.75H15.63c-5.21,0-7.82-6.3-4.14-9.99Z"/>
+      <text class="cls-3" transform="translate(145.52 108.24)"><tspan class="cls-6" x="0" y="0">S</tspan><tspan x="60.86" y="0">ANDESH SH</tspan><tspan class="cls-8" x="608.45" y="0">R</tspan><tspan x="674.53" y="0">E</tspan><tspan class="cls-5" x="732.54" y="0">S</tspan><tspan x="790.79" y="0">THA</tspan></text>
+    </g>
+  </g>
+</svg>

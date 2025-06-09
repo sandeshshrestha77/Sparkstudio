@@ -17,4 +17,4 @@ INSERT INTO blog_posts (title, excerpt, content, author_name, author_role, categ
 
 -- Insert admin user (you'll need to update this with your actual email)
 INSERT INTO admin_users (email, name, role) VALUES
-('admin@sparkstudio.com.np', 'Admin User', 'admin');
+('admin@sandeshshrestha.com.np', 'Admin User', 'admin');

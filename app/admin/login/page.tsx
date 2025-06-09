@@ -143,7 +143,7 @@ export default function AdminLogin() {
             <span className="text-primary-foreground font-bold text-lg">S</span>
           </div>
           <div>
-            <h1 className="text-2xl font-bold">Spark Studio</h1>
+            <h1 className="text-2xl font-bold">Sandesh Shrestha</h1>
             <p className="text-muted-foreground">Admin Panel</p>
           </div>
         </div>

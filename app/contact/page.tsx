@@ -55,8 +55,8 @@ export default function ContactPage() {
       icon: Mail,
       title: "Email Us",
       description: "We typically respond within a few hours",
-      value: "sparkstudionp@gmail.com",
-      action: "sparkstudionp@gmail.com",
+      value: "sandeshstha67@gmail.com",
+      action: "mailto:sandeshstha67@gmail.com",
     },
     {
       icon: Phone,
@@ -70,7 +70,7 @@ export default function ContactPage() {
       title: "Visit Us",
       description: "Our studio in Kathmandu",
       value: "New Baneshwor, Kathmandu, Nepal",
-      action: "#",
+      action: "https://www.google.com/maps/place/New+Baneshwor,+Kathmandu,+Nepal",
     },
   ]
 
@@ -86,7 +86,7 @@ export default function ContactPage() {
                 </div>
                 <h2 className="text-2xl font-bold mb-4">Thanks for reaching out!</h2>
                 <p className="text-muted-foreground mb-6">
-                  We've received your message and our team is excited to learn about your project. We'll get back to you
+                  I've received your message and I'm excited to learn about your project. I'll get back to you
                   within 24 hours with initial thoughts and next steps.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -106,7 +106,7 @@ export default function ContactPage() {
                   >
                     Send Another Message
                   </Button>
-                  <Button variant="outline">View Our Work</Button>
+                  <Button variant="outline">View My Work</Button>
                 </div>
               </CardContent>
             </Card>
@@ -124,11 +124,11 @@ export default function ContactPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Let's Work Together</h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Ready to start your project? We'd love to hear about your vision and explore how Spark Studio can help
+              Ready to start your project? I'd love to hear about your vision and explore how i can help
               bring it to life with exceptional design and video.
             </p>
             <Badge variant="secondary" className="mb-8">
-              🎯 Currently accepting new projects in Nepal
+              Currently accepting new projects
             </Badge>
           </div>
         </div>
@@ -143,9 +143,9 @@ export default function ContactPage() {
               <div className="lg:col-span-2">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Tell us about your project</CardTitle>
+                    <CardTitle>Tell me about your project</CardTitle>
                     <p className="text-muted-foreground">
-                      Share your project details and we'll provide a proposal tailored to your needs and budget.
+                      Share your project details and I'll provide a proposal tailored to your needs and budget.
                     </p>
                   </CardHeader>
                   <CardContent>
@@ -240,7 +240,7 @@ export default function ContactPage() {
                         <Textarea
                           id="message"
                           rows={6}
-                          placeholder="Tell us about your project, goals, target audience, and any specific requirements or ideas you have..."
+                          placeholder="Tell me about your project, goals, target audience, and any specific requirements or ideas you have..."
                           value={formData.message}
                           onChange={(e) => handleChange("message", e.target.value)}
                           required
@@ -256,8 +256,8 @@ export default function ContactPage() {
                       <Alert>
                         <Clock className="h-4 w-4" />
                         <AlertDescription>
-                          Our team will review your project details and get back to you within 24 hours with initial
-                          thoughts and next steps.
+                          I will review your project details and get back to you within 24 hours with initial thoughts and
+                          next steps.
                         </AlertDescription>
                       </Alert>
 
@@ -304,13 +304,12 @@ export default function ContactPage() {
                   <CardContent className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       <DollarSign className="h-5 w-5 text-blue-600" />
-                      <h3 className="font-semibold text-blue-900 dark:text-blue-100">Launch Special</h3>
+                      <h3 className="font-semibold text-blue-900 dark:text-blue-100">Discounted Services</h3>
                     </div>
                     <p className="text-sm text-blue-800 dark:text-blue-200 mb-3">
-                      As a new studio, we're offering special pricing for our first clients. Get professional design and
-                      video work at even more affordable rates.
+                      I'm committed to providing top quality services at unbeatable prices. Get in touch with me today to
+                      learn more about our services and how i can help you.
                     </p>
-                    <Badge className="bg-blue-600 hover:bg-blue-700">Limited Time</Badge>
                   </CardContent>
                 </Card>
 

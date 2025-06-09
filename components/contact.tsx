@@ -46,8 +46,8 @@ export function Contact() {
       icon: Mail,
       title: "Email Us",
       description: "Get in touch via email",
-      value: "hello@sparkstudio.com",
-      action: "mailto:hello@sparkstudio.com",
+      value: "hello@sandeshshrestha.com",
+      action: "mailto:hello@sandeshshrestha.com",
     },
     {
       icon: Phone,

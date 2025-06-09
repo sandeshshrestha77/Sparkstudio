@@ -13,8 +13,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Admin Dashboard - Spark Studio",
-  description: "Admin panel for managing Spark Studio content and services",
+  title: "Admin Dashboard - Sandesh Shrestha",
+  description: "Admin panel for managing Sandesh Shrestha content and services",
   robots: {
     index: false,
     follow: false,

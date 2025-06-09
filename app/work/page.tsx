@@ -76,9 +76,9 @@ export default function WorkPage() {
       <section className="py-24 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Work</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">My Work</h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Explore our portfolio of creative projects. From brand identities to digital experiences, we bring ideas
+              Explore My portfolio of creative projects. From brand identities to digital experiences, I bring ideas
               to life with passion and precision.
             </p>
 
@@ -260,7 +260,7 @@ export default function WorkPage() {
                         <p className="text-muted-foreground mb-6">
                           {searchQuery || selectedCategory !== "all"
                             ? "Try adjusting your search or filter criteria."
-                            : "No projects have been added yet. Check back soon for our latest work!"}
+                            : "No projects have been added yet. Check back soon for my latest work!"}
                         </p>
                         <Button
                           onClick={() => {

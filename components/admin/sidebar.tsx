@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
+import Logo from "@/components/Logo";
 import {
   LayoutDashboard,
   FolderOpen,
@@ -39,10 +40,13 @@ export function AdminSidebar() {
     <div
       className={`bg-background border-r h-screen flex flex-col transition-all duration-300 ${collapsed ? "w-16" : "w-64"}`}
     >
-      <div className="p-4 border-b flex items-center justify-end">
-        <Button variant="ghost" size="sm" className="h-8 w-8 p-0" onClick={() => setCollapsed(!collapsed)}>
-          {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
-        </Button>
+      <div className="flex items-center justify-between p-4 border-b">
+        <button
+          className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground rounded-md h-8 w-8 p-0"
+          onClick={() => setCollapsed((c) => !c)}
+        >
+          {collapsed ? <ChevronRight /> : <ChevronLeft />}
+        </button>
       </div>
 
       <div className="flex-1 py-6 overflow-y-auto">

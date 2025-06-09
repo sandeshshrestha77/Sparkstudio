@@ -8,7 +8,6 @@ import { Badge } from "@/components/ui/badge"
 import { supabase } from "@/lib/supabase"
 import { FolderOpen, Settings, FileText, Mail, Plus, Eye, Edit } from "lucide-react"
 import Link from "next/link"
-import { AdminHeader } from "@/components/admin/header"
 
 interface DashboardStats {
   projects: number

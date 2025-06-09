@@ -30,18 +30,25 @@ export default function AboutPage() {
 
   const timeline = [
     {
-    year: "2025",
-    title: "Soft Launch",
-    description:
-      "We officially launched Spark Studio with a small team of passionate designers, focusing on local businesses.",
-  },
-  {
-    year: "2025",
-    title: "The Idea Sparked",
-    description:
-      "Spark Studios was conceptualized during freelance design projects — born out of a need for better creative services in Nepal.",
-  },
-];
+      year: "2024",
+      title: "The First Brushstroke",
+      description:
+        "June 19 — Stepped into the creative arena as a Graphic Design Intern at Kathmandu Infotech. This was ground zero: where curiosity turned into craft, and pixels started telling stories.",
+    },
+    {
+      year: "2024",
+      title: "Refined by Real-World Chaos",
+      description:
+        "November 20 — Joined Merojob.com. Here, theory met pressure. Real clients. Real campaigns. Real deadlines. By March 11, 2025, I wasn’t just designing — I was solving, adapting, leading.",
+    },
+    {
+      year: "2025",
+      title: "Freelance & Fearless",
+      description:
+        "With internships behind me and hunger in my gut, I entered the freelance world. Self-taught motion design. Late nights with After Effects. Every brief, a battlefield. Every client, a classroom.",
+    },
+  ];
+  
 
   return (
     <div className="pt-16">
@@ -49,10 +56,9 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">About Spark Studio</h1>
+            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">About Sandesh Shrestha</h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We're a Nepali design studio dedicated to creating exceptional graphic design and video content that helps
-              local businesses grow and connect with their audiences.
+              I'm a Nepali designer dedicated to creating exceptional graphic design and video content that helps local businesses grow and connect with their audiences.
             </p>
           </div>
         </div>
@@ -64,24 +70,19 @@ export default function AboutPage() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-slide-in">
-                <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Our Story</h2>
+                <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">My Story</h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Spark Studio was Founded with a simple belief: great design should be accessible to
-                  businesses of all sizes in Nepal. We saw too many local companies struggling with outdated designs or
-                  working with agencies that didn't truly understand the Nepali market.
+                  I started my creative journey with a simple belief: great design should be accessible to businesses of all sizes in Nepal. I saw too many local companies struggling with outdated designs or working with agencies that didn't truly understand the Nepali market.
                 </p>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Our approach is different. We focus on building genuine partnerships with our clients, taking the time
-                  to understand their goals, challenges, and vision. This collaborative approach allows us to create
-                  designs that not only look great but also resonate with Nepali audiences.
+                  My approach is different. I focus on building genuine partnerships with my clients, taking the time to understand their goals, challenges, and vision. This allows me to create designs that not only look great but also resonate with Nepali audiences.
                 </p>
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  As a focused studio, we can offer the personal attention and local expertise that international
-                  agencies can't provide, while maintaining the quality and professionalism you deserve.
+                  As a solo creator, I offer the personal attention and local expertise that international agencies can't provide, while maintaining the quality and professionalism you deserve.
                 </p>
                 <Link href="/contact">
                   <Button className="group">
-                    Work With Us
+                    Work With Me
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
@@ -89,8 +90,8 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="bg-blue-100 dark:bg-blue-900 rounded-lg p-6 text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">2025</div>
-                    <div className="text-sm text-muted-foreground">Founded in Kathmandu</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-2">2024</div>
+                    <div className="text-sm text-muted-foreground">Started Design Journey</div>
                   </div>
                   <div className="bg-green-100 dark:bg-green-900 rounded-lg p-6 text-center">
                     <div className="text-3xl font-bold text-green-600 mb-2">100%</div>
@@ -118,9 +119,9 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Our Values</h2>
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">My Values</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                These core principles guide everything we do and shape how we work with our clients.
+                These core principles guide everything i do and shape how i work with my clients.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -145,9 +146,9 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Our Journey</h2>
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">My Journey</h2>
               <p className="text-lg text-muted-foreground">
-                From concept to launch - here's how Spark Studio came to be.
+              What began as curiosity became craft. This is the origin story of Sandesh Shrestha.
               </p>
             </div>
 
@@ -174,10 +175,10 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Our Nepali Focus</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">My Nepali Focus</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              As a proudly Nepali studio, we understand the local market, culture, and business environment. This allows
-              us to create designs that truly connect with Nepali audiences while meeting international quality
+              As a proudly Nepali Designer, I understand the local market, culture, and business environment. This allows
+              me to create designs that truly connect with Nepali audiences while meeting international quality
               standards.
             </p>
 
@@ -185,7 +186,7 @@ export default function AboutPage() {
               {[
                 {
                   title: "Local Market Knowledge",
-                  description: "We understand what resonates with Nepali consumers",
+                  description: "I understand what resonates with Nepali consumers",
                 },
                 {
                   title: "Affordable Local Pricing",
@@ -213,12 +214,12 @@ export default function AboutPage() {
                 </Button>
               </Link>
               <div className="flex gap-2">
-                <Link href="mailto:sparkstudionp@gmail.com">
+                <Link href="mailto:sandeshshrestha.work@gmail.com">
                   <Button size="lg" variant="outline" className="w-12 h-12 p-0">
                     <Mail className="h-5 w-5" />
                   </Button>
                 </Link>
-                <Link href="https://www.instagram.com/sparkstudio.np" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.instagram.com/sandeshshrestha.work" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="outline" className="w-12 h-12 p-0">
                   <Instagram className="h-5 w-5" />
                   </Button>
