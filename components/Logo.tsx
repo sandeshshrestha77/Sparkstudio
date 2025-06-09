@@ -10,7 +10,7 @@ const Logo: React.FC<{ className?: string; alt?: string }> = ({ className = '', 
     {/* Prefer SVG for crispness, fallback to PNG if needed */}
     <picture>
       <source srcSet="/sparkstudios-logo.svg" type="image/svg+xml" />
-      <Image src="/sparkstudios-logo.png" alt={alt} width={300} height={60} priority />
+      <Image src="/sparkstudios-logo.png" alt={alt} width={240} height={60} priority />
     </picture>
   </span>
 );
